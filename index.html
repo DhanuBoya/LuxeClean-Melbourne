@@ -62,10 +62,22 @@
             font-size: 18px;
             border-radius: 5px;
         }
-        .grid {
-            display: flex;
-            justify-content: space-between;
-            padding: 40px;
+        .pricing {
+            padding: 50px 40px;
+            background: #fff;
+        }
+        .pricing h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .pricing-table th, .pricing-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
         }
         .contact-form {
             padding: 30px;
@@ -88,20 +100,51 @@
     <nav>
         <div>
             <a href="#services">Our Services</a>
-            <a href="#why-choose">Why LuxeClean?</a>
+            <a href="#pricing">Pricing</a>
             <a href="#contact">Contact</a>
         </div>
         <a href="#quote" class="btn btn-dark">Get a Quote</a>
     </nav>
 
-    <div class="grid">
-        <div class="hero">
-            <h1>Expert Airbnb Cleaning Services</h1>
-            <p>We specialize in Airbnb turnover cleaning, ensuring your property is spotless, guest-ready, and earns 5-star reviews.</p>
-            <button class="btn btn-dark">Book Your Cleaning Now</button>
-        </div>
-        <img src="https://raw.githubusercontent.com/DhanuBoya/LuxeClean-Melbourne/main/pexels-jvdm-1454804.jpg" width="600" height="400">
+    <div class="hero">
+        <h1>Expert Airbnb Cleaning Services</h1>
+        <p>We specialize in Airbnb turnover cleaning, ensuring your property is spotless, guest-ready, and earns 5-star reviews.</p>
+        <button class="btn btn-dark">Book Your Cleaning Now</button>
     </div>
+
+    <section id="pricing" class="pricing">
+        <h2>Our Pricing Plans</h2>
+        <table class="pricing-table">
+            <tr>
+                <th>Service</th>
+                <th>Pricing</th>
+            </tr>
+            <tr>
+                <td>Standard Airbnb Turnover Cleaning</td>
+                <td>$90 - $200 (Depending on property size)</td>
+            </tr>
+            <tr>
+                <td>Deep Cleaning</td>
+                <td>$150 - $350</td>
+            </tr>
+            <tr>
+                <td>Express Clean</td>
+                <td>$70 - $100</td>
+            </tr>
+            <tr>
+                <td>Laundry & Linen Service</td>
+                <td>$20 - $30 per load</td>
+            </tr>
+            <tr>
+                <td>Restocking Essentials</td>
+                <td>$10 - $50 per turnover</td>
+            </tr>
+            <tr>
+                <td>Same-Day & Last-Minute Cleaning</td>
+                <td>+20% - 30% surcharge</td>
+            </tr>
+        </table>
+    </section>
 
     <section id="contact" class="contact-form">
         <h2>Contact LuxeClean</h2>
