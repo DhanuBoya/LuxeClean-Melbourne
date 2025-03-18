@@ -12,11 +12,11 @@
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #111;
+            background-color: #000;
+            color: #fff;
         }
         header {
-            background: #111;
+            background: #000;
             color: white;
             text-align: center;
             padding: 20px;
@@ -26,27 +26,26 @@
             top: 0;
             width: 100%;
             z-index: 1000;
+            border-bottom: 1px solid #fff;
         }
         nav {
             display: flex;
             justify-content: center;
             gap: 20px;
             padding: 15px;
-            background: #fff;
-            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            background: #111;
+            border-bottom: 1px solid #333;
         }
         nav a {
             text-decoration: none;
-            color: #111;
+            color: #fff;
             font-weight: 600;
         }
         .hero {
             text-align: center;
             padding: 60px 20px;
-            background: linear-gradient(135deg, #007BFF, #0056b3);
-            color: white;
-            border-radius: 10px;
-            margin: 20px;
+            background: #111;
+            border-bottom: 1px solid #333;
         }
         .hero h1 {
             font-size: 42px;
@@ -59,25 +58,38 @@
         }
         .btn-primary {
             background-color: #fff;
-            color: #007BFF;
+            color: #000;
             padding: 12px 20px;
             font-size: 18px;
             font-weight: bold;
             border-radius: 5px;
             text-decoration: none;
+            display: inline-block;
         }
         .section {
             padding: 40px 20px;
-            max-width: 900px;
+            max-width: 800px;
             margin: auto;
-            background: #fff;
+            background: #111;
             border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
             margin-bottom: 20px;
         }
         .section h2 {
             text-align: center;
             margin-bottom: 20px;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+        }
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            color: #fff;
+        }
+        .pricing-table th, .pricing-table td {
+            border: 1px solid #333;
+            padding: 12px;
+            text-align: left;
         }
         .contact-form input, .contact-form textarea {
             width: 100%;
@@ -85,53 +97,64 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            background: #222;
+            color: #fff;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background: #111;
+            background: #000;
+            border-top: 1px solid #fff;
             color: white;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <header>LuxeClean Melbourne</header>
     <nav>
-        <a href="#services">Our Services</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#services">Services & Pricing</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <div class="hero">
-        <h1>Expert Airbnb Cleaning Services</h1>
-        <p>We specialize in Airbnb turnover cleaning, ensuring your property is spotless, guest-ready, and earns 5-star reviews.</p>
+        <h1>Premium Airbnb Cleaning Services</h1>
+        <p>We specialize in short-term rental turnovers, ensuring your property is spotless, guest-ready, and earns 5-star reviews.</p>
         <a href="#contact" class="btn-primary">Book Your Cleaning Now</a>
     </div>
 
     <section id="services" class="section">
-        <h2>Our Services</h2>
-        <ul>
-            <li><strong>Standard Airbnb Turnover Cleaning</strong> – Full cleaning, fresh linens, restocking essentials.</li>
-            <li><strong>Deep Cleaning</strong> – Inside appliances, grout scrubbing, high-detail sanitation.</li>
-            <li><strong>Express Clean</strong> – Quick refresh for back-to-back bookings.</li>
-            <li><strong>Laundry & Linen Service</strong> – Wash, dry, and fold bed linens & towels.</li>
-            <li><strong>Restocking Essentials</strong> – Refill toiletries, paper products, and guest supplies.</li>
-            <li><strong>Same-Day & Last-Minute Cleaning</strong> – Urgent turnovers (extra charge applies).</li>
-        </ul>
-    </section>
-
-    <section id="pricing" class="section">
-        <h2>Pricing</h2>
-        <ul>
-            <li><strong>Standard Airbnb Turnover:</strong> $90 - $200 (Based on property size)</li>
-            <li><strong>Deep Cleaning:</strong> $150 - $350</li>
-            <li><strong>Express Clean:</strong> $70 - $100</li>
-            <li><strong>Laundry & Linen Service:</strong> $20 - $30 per load</li>
-            <li><strong>Restocking Essentials:</strong> $10 - $50 per turnover</li>
-            <li><strong>Same-Day & Last-Minute Cleaning:</strong> +20% - 30% surcharge</li>
-        </ul>
+        <h2>Services & Pricing</h2>
+        <table class="pricing-table">
+            <tr>
+                <th>Service</th>
+                <th>Pricing</th>
+            </tr>
+            <tr>
+                <td><strong>Standard Airbnb Turnover</strong><br>Full cleaning, fresh linens, restocking essentials.</td>
+                <td>$90 - $200</td>
+            </tr>
+            <tr>
+                <td><strong>Deep Cleaning</strong><br>Includes standard cleaning plus inside appliances, grout scrubbing.</td>
+                <td>$150 - $350</td>
+            </tr>
+            <tr>
+                <td><strong>Express Clean</strong><br>Quick refresh for back-to-back bookings.</td>
+                <td>$70 - $100</td>
+            </tr>
+            <tr>
+                <td><strong>Laundry & Linen Service</strong><br>Wash, dry, and fold bed linens & towels.</td>
+                <td>$20 - $30 per load</td>
+            </tr>
+            <tr>
+                <td><strong>Restocking Essentials</strong><br>Refill toiletries, paper products, and guest supplies.</td>
+                <td>$10 - $50 per turnover</td>
+            </tr>
+            <tr>
+                <td><strong>Same-Day & Last-Minute Cleaning</strong><br>Urgent turnovers (extra charge applies).</td>
+                <td>+20% - 30% surcharge</td>
+            </tr>
+        </table>
     </section>
 
     <section id="contact" class="section contact-form">
@@ -151,4 +174,5 @@
     </footer>
 </body>
 </html>
+
 
