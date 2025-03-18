@@ -62,15 +62,11 @@
             font-size: 18px;
             border-radius: 5px;
         }
-        .pricing {
+        .contact-form, .testimonials, .faq, .pricing, .gallery {
             padding: 50px 40px;
             background: #fff;
         }
-        .pricing h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        .pricing-table {
+        .pricing-table, .faq details {
             width: 100%;
             border-collapse: collapse;
         }
@@ -79,19 +75,16 @@
             padding: 10px;
             text-align: left;
         }
-        .contact-form {
-            padding: 30px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-            max-width: 400px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
+        .book-now {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
             background: #111;
             color: white;
-            margin-top: 50px;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -101,6 +94,7 @@
         <div>
             <a href="#services">Our Services</a>
             <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
             <a href="#contact">Contact</a>
         </div>
         <a href="#quote" class="btn btn-dark">Get a Quote</a>
@@ -109,41 +103,25 @@
     <div class="hero">
         <h1>Expert Airbnb Cleaning Services</h1>
         <p>We specialize in Airbnb turnover cleaning, ensuring your property is spotless, guest-ready, and earns 5-star reviews.</p>
-        <button class="btn btn-dark">Book Your Cleaning Now</button>
+        <a href="#contact" class="btn btn-dark">Book Your Cleaning Now</a>
     </div>
 
-    <section id="pricing" class="pricing">
-        <h2>Our Pricing Plans</h2>
-        <table class="pricing-table">
-            <tr>
-                <th>Service</th>
-                <th>Pricing</th>
-            </tr>
-            <tr>
-                <td>Standard Airbnb Turnover Cleaning</td>
-                <td>$90 - $200 (Depending on property size)</td>
-            </tr>
-            <tr>
-                <td>Deep Cleaning</td>
-                <td>$150 - $350</td>
-            </tr>
-            <tr>
-                <td>Express Clean</td>
-                <td>$70 - $100</td>
-            </tr>
-            <tr>
-                <td>Laundry & Linen Service</td>
-                <td>$20 - $30 per load</td>
-            </tr>
-            <tr>
-                <td>Restocking Essentials</td>
-                <td>$10 - $50 per turnover</td>
-            </tr>
-            <tr>
-                <td>Same-Day & Last-Minute Cleaning</td>
-                <td>+20% - 30% surcharge</td>
-            </tr>
-        </table>
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <p>⭐⭐⭐⭐⭐ “LuxeClean has completely transformed my Airbnb. Always spotless!” – Sarah, Airbnb Host</p>
+        <p>⭐⭐⭐⭐⭐ “Reliable, affordable, and professional. Highly recommend!” – James, Property Manager</p>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2>Before & After Cleaning</h2>
+        <img src="before-cleaning.jpg" width="100%">
+        <img src="after-cleaning.jpg" width="100%">
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <details><summary>What’s included in a standard Airbnb turnover?</summary><p>We clean bathrooms, kitchens, change linens, restock essentials, and ensure your space is guest-ready.</p></details>
+        <details><summary>How long does cleaning take?</summary><p>Standard cleaning takes 1.5-3.5 hours, depending on the property size.</p></details>
     </section>
 
     <section id="contact" class="contact-form">
@@ -151,9 +129,9 @@
         <p>Email: info@luxecleanmelbourne.com.au</p>
         <p>Phone: 0404 180 420</p>
         <form action="https://formspree.io/f/xkgjwwrn" method="POST">
-            <input type="text" name="name" placeholder="Your Name" class="form-control mb-3" required>
-            <input type="email" name="email" placeholder="Your Email" class="form-control mb-3" required>
-            <textarea name="message" placeholder="Your Message" class="form-control mb-3" required></textarea>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit" class="btn btn-dark">Submit</button>
         </form>
     </section>
@@ -161,5 +139,8 @@
     <footer>
         <p>© 2025 LuxeClean Melbourne. All rights reserved.</p>
     </footer>
+
+    <a href="#contact" class="book-now">📅 Book Now</a>
 </body>
 </html>
+
