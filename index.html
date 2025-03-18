@@ -18,7 +18,7 @@
         header {
             background: #111;
             color: white;
-            text-align: left;
+            text-align: center;
             padding: 20px;
             font-size: 24px;
             font-weight: bold;
@@ -29,8 +29,9 @@
         }
         nav {
             display: flex;
-            justify-content: space-between;
-            padding: 15px 40px;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
             background: #fff;
             box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
         }
@@ -38,110 +39,102 @@
             text-decoration: none;
             color: #111;
             font-weight: 600;
-            margin: 0 15px;
         }
         .hero {
-            text-align: left;
-            padding: 80px 40px;
-            max-width: 600px;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #007BFF, #0056b3);
+            color: white;
+            border-radius: 10px;
+            margin: 20px;
         }
         .hero h1 {
-            font-size: 48px;
+            font-size: 42px;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         .hero p {
             font-size: 18px;
-            color: #555;
             margin-bottom: 20px;
         }
-        .btn-dark {
-            background-color: #111;
-            border: none;
+        .btn-primary {
+            background-color: #fff;
+            color: #007BFF;
             padding: 12px 20px;
             font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
             border-radius: 5px;
         }
-        .pricing, .services {
-            padding: 50px 40px;
-            background: #fff;
-        }
-        .pricing-table, .faq details {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .pricing-table th, .pricing-table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: white;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <header>LuxeClean Melbourne</header>
     <nav>
-        <div>
-            <a href="#services">Our Services</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <a href="#quote" class="btn btn-dark">Get a Quote</a>
+        <a href="#services">Our Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <div class="hero">
         <h1>Expert Airbnb Cleaning Services</h1>
         <p>We specialize in Airbnb turnover cleaning, ensuring your property is spotless, guest-ready, and earns 5-star reviews.</p>
-        <a href="#contact" class="btn btn-dark">Book Your Cleaning Now</a>
+        <a href="#contact" class="btn-primary">Book Your Cleaning Now</a>
     </div>
 
-    <section id="services" class="services">
+    <section id="services" class="section">
         <h2>Our Services</h2>
         <ul>
-            <li><strong>Standard Airbnb Turnover Cleaning</strong>: Change linens, sanitize kitchen, clean bathrooms, dust, vacuum, mop, and restock essentials.</li>
-            <li><strong>Deep Cleaning</strong>: Includes standard cleaning plus inside appliances, blinds, baseboards, and grout scrubbing.</li>
-            <li><strong>Express Clean</strong>: Quick refresh for back-to-back bookings (high-traffic areas only).</li>
-            <li><strong>Laundry & Linen Service</strong>: Wash, dry, and fold bed linens & towels.</li>
-            <li><strong>Restocking Essentials</strong>: Refill toiletries, paper products, and guest supplies.</li>
-            <li><strong>Same-Day & Last-Minute Cleaning</strong>: Fast response for urgent turnovers (extra charge applies).</li>
+            <li><strong>Standard Airbnb Turnover Cleaning</strong> – Full cleaning, fresh linens, restocking essentials.</li>
+            <li><strong>Deep Cleaning</strong> – Inside appliances, grout scrubbing, high-detail sanitation.</li>
+            <li><strong>Express Clean</strong> – Quick refresh for back-to-back bookings.</li>
+            <li><strong>Laundry & Linen Service</strong> – Wash, dry, and fold bed linens & towels.</li>
+            <li><strong>Restocking Essentials</strong> – Refill toiletries, paper products, and guest supplies.</li>
+            <li><strong>Same-Day & Last-Minute Cleaning</strong> – Urgent turnovers (extra charge applies).</li>
         </ul>
     </section>
 
-    <section id="pricing" class="pricing">
-        <h2>Our Pricing</h2>
-        <table class="pricing-table">
-            <tr>
-                <th>Service</th>
-                <th>Pricing</th>
-            </tr>
-            <tr>
-                <td>Standard Airbnb Turnover Cleaning</td>
-                <td>$90 - $200 (Based on property size)</td>
-            </tr>
-            <tr>
-                <td>Deep Cleaning</td>
-                <td>$150 - $350</td>
-            </tr>
-            <tr>
-                <td>Express Clean</td>
-                <td>$70 - $100</td>
-            </tr>
-            <tr>
-                <td>Laundry & Linen Service</td>
-                <td>$20 - $30 per load</td>
-            </tr>
-            <tr>
-                <td>Restocking Essentials</td>
-                <td>$10 - $50 per turnover</td>
-            </tr>
-            <tr>
-                <td>Same-Day & Last-Minute Cleaning</td>
-                <td>+20% - 30% surcharge</td>
-            </tr>
-        </table>
+    <section id="pricing" class="section">
+        <h2>Pricing</h2>
+        <ul>
+            <li><strong>Standard Airbnb Turnover:</strong> $90 - $200 (Based on property size)</li>
+            <li><strong>Deep Cleaning:</strong> $150 - $350</li>
+            <li><strong>Express Clean:</strong> $70 - $100</li>
+            <li><strong>Laundry & Linen Service:</strong> $20 - $30 per load</li>
+            <li><strong>Restocking Essentials:</strong> $10 - $50 per turnover</li>
+            <li><strong>Same-Day & Last-Minute Cleaning:</strong> +20% - 30% surcharge</li>
+        </ul>
     </section>
 
-    <section id="contact" class="contact-form">
+    <section id="contact" class="section contact-form">
         <h2>Contact LuxeClean</h2>
         <p>Email: info@luxecleanmelbourne.com.au</p>
         <p>Phone: 0404 180 420</p>
@@ -149,7 +142,7 @@
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn btn-dark">Submit</button>
+            <button type="submit" class="btn-primary">Submit</button>
         </form>
     </section>
 
@@ -158,5 +151,4 @@
     </footer>
 </body>
 </html>
-
 
