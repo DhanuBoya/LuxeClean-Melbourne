@@ -52,25 +52,11 @@
             margin: 15px;
             border-radius: 10px;
             display: inline-block;
-            width: 80%;
+            width: 90%;
+            transition: transform 0.3s ease-in-out;
         }
-        .testimonials {
-            padding: 50px;
-            background: #111;
-            text-align: center;
-        }
-        .carousel-inner {
-            text-align: center;
-        }
-        .testimonial-card {
-            background: #222;
-            padding: 20px;
-            border-radius: 10px;
-            width: 80%;
-            margin: auto;
-        }
-        .carousel-control-prev, .carousel-control-next {
-            filter: invert(1);
+        .service-card:hover {
+            transform: scale(1.05);
         }
         .contact {
             text-align: center;
@@ -100,35 +86,32 @@
         <button class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/luxecleanmelbourne/30min')">Book Now</button>
     </div>
 
-    <section id="testimonials" class="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="testimonial-card">
-                        <p>★★★★★ "LuxeClean is a game changer! My Airbnb guests always compliment the cleanliness."</p>
-                        <p><strong>- Sarah T.</strong></p>
+    <section id="services" class="services">
+        <h2>Our Services & Pricing</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <h3>Standard Cleaning</h3>
+                        <p>✔️ Full Airbnb turnover service <br>✔️ Linen change & restocking <br>✔️ Kitchen, bathroom, and floor cleaning</p>
+                        <p><strong>From $90</strong></p>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="testimonial-card">
-                        <p>★★★★★ "Reliable and professional. I never have to worry about last-minute turnovers."</p>
-                        <p><strong>- James R.</strong></p>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <h3>Deep Cleaning</h3>
+                        <p>✔️ Includes Standard Cleaning <br>✔️ Inside oven, fridge, blinds, grout cleaning <br>✔️ Extra focus on hidden dirt</p>
+                        <p><strong>From $150</strong></p>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="testimonial-card">
-                        <p>★★★★★ "Exceptional service! My Airbnb ratings have improved thanks to LuxeClean."</p>
-                        <p><strong>- Olivia M.</strong></p>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <h3>Express Cleaning</h3>
+                        <p>✔️ Quick refresh of high-traffic areas <br>✔️ Fast vacuum, mop, and surface wipe</p>
+                        <p><strong>Flat Rate: $70</strong></p>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
         </div>
     </section>
 
