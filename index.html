@@ -154,65 +154,94 @@
         </button>
     </div>
 
-    <section id="services" class="services">
-        <h2>Our Services & Pricing</h2>
-        <div class="container">
-            <div class="row justify-content-center">
-                
-                <!-- Standard Cleaning Card -->
-                <div class="col-md-4">
-                    <div class="service-card" onclick="flipCard(this)">
-                        <div class="service-front">
-                            <h3><i class="fas fa-broom"></i> Standard Cleaning</h3>
-                            <p>✔️ Full Airbnb turnover service <br>✔️ Linen change & restocking <br>✔️ Kitchen, bathroom, and floor cleaning</p>
-                            <button class="btn btn-outline-light">View Pricing</button>
-                        </div>
-                        <div class="service-back">
-                            <h3>Standard Cleaning</h3>
-                            <p>Perfect for regular Airbnb turnovers.</p>
-                            <p><strong>From $90</strong></p>
-                            <button class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/luxecleanmelbourne/30min')">Book Now</button>
-                        </div>
+<section id="services" class="services">
+    <h2>Our Services & Pricing</h2>
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <!-- Standard Airbnb Turnover Cleaning -->
+            <div class="col-md-4">
+                <div class="service-card" onclick="flipCard(this)">
+                    <div class="service-front">
+                        <h3><i class="fas fa-broom"></i> Standard Cleaning</h3>
+                        <p>✔️ Full Airbnb turnover service <br>✔️ Linen change & restocking <br>✔️ Kitchen, bathroom, and floor cleaning</p>
+                        <button class="btn btn-outline-light">View Pricing</button>
+                    </div>
+                    <div class="service-back">
+                        <h3>Standard Cleaning</h3>
+                        <p>💰 **Studio/1-Bed:** $90 – $110<br>💰 **2-Bed:** $130 – $150<br>💰 **3-Bed:** $160 – $190<br>💰 **4+ Bed:** $220 – $250</p>
+                        <button class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/luxecleanmelbourne/30min')">Book Now</button>
                     </div>
                 </div>
-    
-                <!-- Deep Cleaning Card -->
-                <div class="col-md-4">
-                    <div class="service-card" onclick="flipCard(this)">
-                        <div class="service-front">
-                            <h3><i class="fas fa-spray-can"></i> Deep Cleaning</h3>
-                            <p>✔️ Standard Cleaning + <br>✔️ Inside oven, fridge, blinds, grout cleaning <br>✔️ Extra focus on hidden dirt</p>
-                            <button class="btn btn-outline-light">View Pricing</button>
-                        </div>
-                        <div class="service-back">
-                            <h3>Deep Cleaning</h3>
-                            <p>Ideal for seasonal or post-stay deep cleaning.</p>
-                            <p><strong>From $150</strong></p>
-                            <button class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/luxecleanmelbourne/30min')">Book Now</button>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Express Cleaning Card -->
-                <div class="col-md-4">
-                    <div class="service-card" onclick="flipCard(this)">
-                        <div class="service-front">
-                            <h3><i class="fas fa-tachometer-alt"></i> Express Cleaning</h3>
-                            <p>✔️ Quick refresh of high-traffic areas <br>✔️ Fast vacuum, mop, and surface wipe</p>
-                            <button class="btn btn-outline-light">View Pricing</button>
-                        </div>
-                        <div class="service-back">
-                            <h3>Express Cleaning</h3>
-                            <p>Fast cleaning for last-minute bookings.</p>
-                            <p><strong>Flat Rate: $70</strong></p>
-                            <button class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/luxecleanmelbourne/30min')">Book Now</button>
-                        </div>
-                    </div>
-                </div>
-    
             </div>
+
+            <!-- Deep Cleaning -->
+            <div class="col-md-4">
+                <div class="service-card" onclick="flipCard(this)">
+                    <div class="service-front">
+                        <h3><i class="fas fa-spray-can"></i> Deep Cleaning</h3>
+                        <p>✔️ Includes Standard Cleaning + <br>✔️ Inside oven, fridge, blinds, grout cleaning <br>✔️ Extra focus on hidden dirt</p>
+                        <button class="btn btn-outline-light">View Pricing</button>
+                    </div>
+                    <div class="service-back">
+                        <h3>Deep Cleaning</h3>
+                        <p>💰 **Studio/1-Bed:** $160 – $180<br>💰 **2-Bed:** $200 – $240<br>💰 **3-Bed:** $270 – $320<br>💰 **4+ Bed:** $370 – $450</p>
+                        <button class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/luxecleanmelbourne/30min')">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Express Cleaning -->
+            <div class="col-md-4">
+                <div class="service-card" onclick="flipCard(this)">
+                    <div class="service-front">
+                        <h3><i class="fas fa-tachometer-alt"></i> Express Cleaning</h3>
+                        <p>✔️ Quick refresh of high-traffic areas <br>✔️ Fast vacuum, mop, and surface wipe</p>
+                        <button class="btn btn-outline-light">View Pricing</button>
+                    </div>
+                    <div class="service-back">
+                        <h3>Express Cleaning</h3>
+                        <p>💰 **Flat Rate:** $70 – $90 (1-hour refresh)</p>
+                        <button class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/luxecleanmelbourne/30min')">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add-On Services -->
+            <div class="col-md-4">
+                <div class="service-card" onclick="flipCard(this)">
+                    <div class="service-front">
+                        <h3><i class="fas fa-plus-circle"></i> Add-On Services</h3>
+                        <p>✔️ Extra services for a complete Airbnb experience</p>
+                        <button class="btn btn-outline-light">View Pricing</button>
+                    </div>
+                    <div class="service-back">
+                        <h3>Add-On Services</h3>
+                        <p>🧺 **Laundry (Per Load):** $20 – $30<br>🛒 **Restocking Essentials:** $20 – $40<br>⚡ **Last-Minute Cleaning Fee:** +25%<br>🐾 **Extra Mess (Pets/Parties):** $50 – $80</p>
+                        <button class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/luxecleanmelbourne/30min')">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscription Plans -->
+            <div class="col-md-4">
+                <div class="service-card" onclick="flipCard(this)">
+                    <div class="service-front">
+                        <h3><i class="fas fa-sync-alt"></i> Subscription Plans</h3>
+                        <p>✔️ Discounts for regular hosts</p>
+                        <button class="btn btn-outline-light">View Pricing</button>
+                    </div>
+                    <div class="service-back">
+                        <h3>Subscription Plans</h3>
+                        <p>⭐ **Starter Plan (4 cleans/month):** $85 per clean (1-bed)<br>⭐ **Pro Host (8 cleans/month):** $80 per clean (1-bed)<br>⭐ **Superhost (12+ cleans/month):** $75 per clean (1-bed)</p>
+                        <button class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/luxecleanmelbourne/30min')">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <footer>
         <p>&copy; 2025 LuxeClean Melbourne. All rights reserved.</p>
