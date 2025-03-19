@@ -12,36 +12,41 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script src="https://getbutton.io/widget.js" async></script>
-    <script async src="https://embed.tawk.to/64a1c2a1cc26a871b02a1b23/1h3mj1q5l" charset="UTF-8" crossorigin="*"></script>
-    <script>
-        window.onload = function() {
-            (function() {
-                var options = {
-                    whatsapp: "61404180420",
-                    call_to_action: "Chat with us on WhatsApp!",
-                    position: "right",
-                };
-                var script = document.createElement("script");
-                script.type = "text/javascript";
-                script.src = "https://getbutton.io/widget.js";
-                script.onload = function() {
-                    window.__GetButton(options);
-                };
-                document.body.appendChild(script);
-            })();
-        };
-    </script>
+    
+    <!-- WhatsApp Chatbot Integration -->
     <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/64a1c2a1cc26a871b02a1b23/1h3mj1q5l';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
+        (function () {
+            var options = {
+                whatsapp: "0404180420", // LuxeClean's WhatsApp number
+                call_to_action: "Chat with us on WhatsApp!",
+                position: "right", // 'right' or 'left'
+            };
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async = true;
+            script.src = "https://static.getbutton.io/widget-send-button/js/init.js";
+            script.onload = function () {
+                WhWidgetSendButton.init(options);
+            };
+            document.body.appendChild(script);
         })();
     </script>
+    <!-- End WhatsApp Chatbot Integration -->
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/67da3c40123ff2191266d064/1imm7mn5m';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -88,13 +93,6 @@
             box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
             margin-bottom: 20px;
         }
-        .testimonial {
-            padding: 20px;
-            font-size: 18px;
-            font-style: italic;
-            border-left: 5px solid #1DB954;
-            margin: 10px;
-        }
     </style>
 </head>
 <body>
@@ -111,39 +109,31 @@
         <p>Schedule your Airbnb cleaning easily with our online booking system.</p>
         <div class="calendly-inline-widget" data-url="https://calendly.com/luxecleanmelbourne/30min?preview_source=et_card&month=2025-03" style="min-width:320px;height:630px;"></div>
     </section>
+    
     <section id="testimonials" class="section">
         <h2>What Our Clients Say</h2>
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <p>See why LuxeClean is the #1 choice for Airbnb hosts in Melbourne!</p>
+        <div class="carousel slide" id="testimonialCarousel" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <p class="testimonial">"LuxeClean did an amazing job with my Airbnb! My guests always compliment how spotless it is." - Sarah M.</p>
+                    <p>"LuxeClean transformed our Airbnb – spotless, timely, and highly professional!" – Sarah M.</p>
                 </div>
                 <div class="carousel-item">
-                    <p class="testimonial">"Professional, reliable, and thorough. Highly recommend LuxeClean for short-term rental cleaning!" - James R.</p>
+                    <p>"Fantastic service! My guests always comment on how clean the place is." – James R.</p>
                 </div>
                 <div class="carousel-item">
-                    <p class="testimonial">"I can always count on LuxeClean to prepare my Airbnb perfectly before each guest arrives." - Emily K.</p>
+                    <p>"Booking was seamless, and the quality of cleaning is unmatched!" – Olivia P.</p>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon"></span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon"></span>
             </button>
         </div>
     </section>
-    <section id="contact" class="section">
-        <h2>Contact LuxeClean</h2>
-        <p>Email: info@luxecleanmelbourne.com.au</p>
-        <p>Phone: 0404 180 420</p>
-        <form action="https://formspree.io/f/xkgjwwrn" method="POST">
-            <input type="text" name="name" placeholder="Your Name" class="form-control mb-3" required>
-            <input type="email" name="email" placeholder="Your Email" class="form-control mb-3" required>
-            <textarea name="message" placeholder="Your Message" class="form-control mb-3" required></textarea>
-            <button type="submit" class="btn-primary">Submit</button>
-        </form>
-    </section>
+
     <footer>
         <p>© 2025 LuxeClean Melbourne. All rights reserved.</p>
     </footer>
