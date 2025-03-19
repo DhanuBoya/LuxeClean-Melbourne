@@ -54,6 +54,24 @@
             display: inline-block;
             width: 80%;
         }
+        .testimonials {
+            padding: 50px;
+            background: #111;
+            text-align: center;
+        }
+        .carousel-inner {
+            text-align: center;
+        }
+        .testimonial-card {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            margin: auto;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            filter: invert(1);
+        }
         .contact {
             text-align: center;
             padding: 50px;
@@ -82,76 +100,40 @@
         <button class="btn btn-primary">Book Now</button>
     </div>
 
-    <section id="services" class="services">
-        <h2>Our Services & Pricing</h2>
-        <div class="service-card">
-            <h3>Standard Airbnb Turnover Cleaning</h3>
-            <p>✔️ Change bed linens & make beds <br>✔️ Clean & sanitize kitchen <br>✔️ Clean & disinfect bathrooms <br>✔️ Dust & wipe surfaces <br>✔️ Vacuum and mop floors <br>✔️ Restock essentials</p>
-            <p><strong>Pricing:</strong><br>Studio/1-Bed: $90 – $120<br>2-Bedroom: $120 – $160<br>3-Bedroom: $150 – $200<br>4+ Bedroom: $200+</p>
-        </div>
-        <div class="service-card">
-            <h3>Deep Cleaning (Recommended Monthly)</h3>
-            <p>✔️ Includes Standard Cleaning + Inside oven, fridge, blinds, grout cleaning</p>
-            <p><strong>Pricing:</strong><br>Studio/1-Bed: $150 – $200<br>2-Bedroom: $200 – $250<br>3-Bedroom: $250 – $350<br>4+ Bedroom: $350+</p>
-        </div>
-        <div class="service-card">
-            <h3>Express Clean (For Back-to-Back Bookings)</h3>
-            <p>✔️ Quick refresh of high-traffic areas <br>✔️ Vacuum & mop main areas <br>✔️ Wipe down kitchen & bathroom surfaces</p>
-            <p><strong>Flat Rate:</strong> $70 – $100</p>
-        </div>
-        <div class="service-card">
-            <h3>Subscription Plans for Frequent Hosts</h3>
-            <p>Starter Plan: 4 cleans/month – 5% off <br>Pro Host: 8 cleans/month – 10% off <br>Superhost Plan: 12+ cleans/month – 15% off</p>
-        </div>
-    </section>
-
     <section id="testimonials" class="testimonials">
         <h2>What Our Clients Say</h2>
-        <p>★★★★★ "Amazing service, my Airbnb has never been cleaner!" - Sarah T.</p>
-        <p>★★★★★ "Super professional and always on time. My guests love the spotless cleaning." - Mark S.</p>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Contact LuxeClean Melbourne</h2>
-        <p>Email: info@luxecleanmelbourne.com.au</p>
-        <p>Phone: 0404 180 420</p>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="testimonial-card">
+                        <p>★★★★★ "LuxeClean is a game changer! My Airbnb guests always compliment the cleanliness."</p>
+                        <p><strong>- Sarah T.</strong></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <p>★★★★★ "Reliable and professional. I never have to worry about last-minute turnovers."</p>
+                        <p><strong>- James R.</strong></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <p>★★★★★ "Exceptional service! My Airbnb ratings have improved thanks to LuxeClean."</p>
+                        <p><strong>- Olivia M.</strong></p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 LuxeClean Melbourne. All rights reserved.</p>
     </footer>
-
-    <!-- Calendly Integration -->
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-    <script>
-        window.onload = function() {
-            Calendly.initInlineWidget({
-                url: 'https://calendly.com/luxecleanmelbourne/30min',
-                parentElement: document.body
-            });
-        };
-    </script>
-    
-    <!-- WhatsApp Integration -->
-    <script>
-        (function() {
-            var wa = document.createElement('script');
-            wa.src = "https://api.whatsapp.com/send?phone=61404180420";
-            document.body.appendChild(wa);
-        })();
-    </script>
-    
-    <!-- Live Chat Integration -->
-    <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/67da3c40123ff2191266d064/1imm7mn5m';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-        })();
-    </script>
 </body>
 </html>
