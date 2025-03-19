@@ -46,34 +46,6 @@
         nav a:hover {
             color: #1DB954;
         }
-        .hero {
-            text-align: left;
-            padding: 80px 20px;
-            background: #000;
-            border-bottom: 1px solid #333;
-        }
-        .hero h1 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .btn-primary {
-            background-color: #fff;
-            color: #000;
-            padding: 12px 20px;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s ease-in-out;
-        }
-        .btn-primary:hover {
-            background-color: #ccc;
-        }
         .section {
             padding: 40px 20px;
             max-width: 900px;
@@ -82,6 +54,16 @@
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
             margin-bottom: 20px;
+        }
+        .carousel-inner {
+            text-align: center;
+        }
+        .testimonial {
+            padding: 20px;
+            font-size: 18px;
+            font-style: italic;
+            border-left: 5px solid #1DB954;
+            margin: 10px;
         }
     </style>
 </head>
@@ -94,10 +76,27 @@
         <a href="#contact">Contact</a>
         <a href="#booking" class="btn-primary">Book Now</a>
     </nav>
-    <section id="booking" class="section">
-        <h2>Book Your Cleaning</h2>
-        <p>Schedule your Airbnb cleaning easily with our online booking system.</p>
-        <div class="calendly-inline-widget" data-url="https://calendly.com/luxecleanmelbourne/30min?preview_source=et_card&month=2025-03" style="min-width:320px;height:630px;"></div>
+    <section id="testimonials" class="section">
+        <h2>What Our Clients Say</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p class="testimonial">"LuxeClean did an amazing job with my Airbnb! My guests always compliment how spotless it is." - Sarah M.</p>
+                </div>
+                <div class="carousel-item">
+                    <p class="testimonial">"Professional, reliable, and thorough. Highly recommend LuxeClean for short-term rental cleaning!" - James R.</p>
+                </div>
+                <div class="carousel-item">
+                    <p class="testimonial">"I can always count on LuxeClean to prepare my Airbnb perfectly before each guest arrives." - Emily K.</p>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
     </section>
     <section id="contact" class="section">
         <h2>Contact LuxeClean</h2>
@@ -113,18 +112,5 @@
     <footer>
         <p>© 2025 LuxeClean Melbourne. All rights reserved.</p>
     </footer>
-    <script>
-        (function() {
-            var options = {
-                whatsapp: "61404180420", // WhatsApp number
-                call_to_action: "Chat with us on WhatsApp!", // Call to action
-                position: "right", // Position may be 'right' or 'left'
-            };
-            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-            s.onload = function() { WhWidgetSendButton.init(host, proto, options); };
-            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-        })();
-    </script>
 </body>
 </html>
