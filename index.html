@@ -82,8 +82,15 @@
 
     <div class="hero">
         <h2>Book Your Cleaning</h2>
-        <p>Schedule your Airbnb cleaning easily with our online booking system.</p>
-        <button class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/luxecleanmelbourne/30min')">Book Now</button>
+        <p>Schedule your Airbnb cleaning easily with our integrated booking system.</p>
+        
+        <!-- Calendly Embedded Widget -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/luxecleanmelbourne/30min" style="min-width:320px;height:630px;"></div>
+        
+        <!-- Backup Button for Popup Booking -->
+        <button class="btn btn-primary mt-3" onclick="Calendly.showPopupWidget('https://calendly.com/luxecleanmelbourne/30min')">
+            Book Now
+        </button>
     </div>
 
     <section id="services" class="services">
