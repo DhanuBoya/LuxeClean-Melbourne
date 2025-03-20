@@ -507,15 +507,17 @@
     
     <!-- Tawk.to Live Chat Integration -->
     <script>
-        window.addEventListener("load", function () {
+    window.addEventListener("load", function () {
+        setTimeout(function () {
             var s1 = document.createElement("script");
             s1.src = 'https://embed.tawk.to/67da3c40123ff2191266d064/1imm7mn5m';
             s1.async = true;
             s1.charset = 'UTF-8';
             s1.setAttribute('crossorigin', '*');
             document.body.appendChild(s1);
-        });
-    </script>
+        }, 2000); // Delay loading by 2 seconds for stability
+    });
+</script>
     <script>
         function flipCard(card) {
             card.classList.toggle("flipped");
