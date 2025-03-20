@@ -508,12 +508,15 @@
     <script>
     window.addEventListener("load", function () {
         setTimeout(function () {
-            var s1 = document.createElement("script");
-            s1.src = 'https://embed.tawk.to/9a7a1b69f0f45a64496b6eaf5c4fb9d9a158356e/1imm7mn5m';
-            s1.async = true;
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            document.body.appendChild(s1);
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            (function(){
+                var s1 = document.createElement("script"),s0 = document.getElementsByTagName("script")[0];
+                s1.async = true;
+                s1.src = 'https://embed.tawk.to/9a7a1b69f0f45a64496b6eaf5c4fb9d9a158356e/1imm7mn5m';
+                s1.charset = 'UTF-8';
+                s1.setAttribute('crossorigin', '*');
+                s0.parentNode.insertBefore(s1, s0);
+            })();
         }, 2000); // Delay by 2 seconds for stability
     });
     </script>
