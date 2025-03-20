@@ -86,12 +86,12 @@
             box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
         }
 
-/* Ensure Cards Stack on Mobile */
-@media (max-width: 768px) {
-    .service-card {
-        width: 100%;
-        max-width: 100%;
-    }
+        /* Ensure Cards Stack on Mobile */
+        @media (max-width: 768px) {
+            .service-card {
+                width: 100%;
+                max-width: 100%;
+            }
 }
 
         /* Card Flip Effect */
@@ -264,6 +264,73 @@
             font-size: 14px;
             opacity: 0.7;
         }
+        /* Chatbot Styling */
+        #chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            background: #111;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #chatbot-header {
+            background: #222;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #chatbot-messages {
+            height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        #chatbot-input {
+            border: none;
+            padding: 10px;
+            width: 100%;
+            background: #333;
+            color: #fff;
+        }
+
+        #chatbot-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .bot-message {
+            background: #28a745;
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+            margin: 5px 0;
+        }
+
+        .user-message {
+            background: #444;
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+            margin: 5px 0;
+            text-align: right;
+        }
     </style>
 </head>
 <body>
@@ -392,6 +459,14 @@
         </div>
     </section>
 
+    <!-- Chatbot UI -->
+<button id="chatbot-toggle">💬</button>
+<div id="chatbot-container">
+    <div id="chatbot-header">LuxeClean Assistant</div>
+    <div id="chatbot-messages"></div>
+    <input type="text" id="chatbot-input" placeholder="Ask a question...">
+</div>
+
     <footer>
         <div class="footer-container">
             <div class="footer-section">
@@ -456,6 +531,53 @@
                 loader.style.display = "none";  // Hide loader
             }, 2500);  // 2.5-second delay before displaying Calendly
         });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const chatbotToggle = document.getElementById("chatbot-toggle");
+        const chatbotContainer = document.getElementById("chatbot-container");
+        const chatbotInput = document.getElementById("chatbot-input");
+        const chatbotMessages = document.getElementById("chatbot-messages");
+
+        chatbotToggle.addEventListener("click", function () {
+            chatbotContainer.style.display = chatbotContainer.style.display === "flex" ? "none" : "flex";
+        });
+
+        chatbotInput.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                const userMessage = chatbotInput.value.trim();
+                if (userMessage) {
+                    appendMessage(userMessage, "user-message");
+                    chatbotInput.value = "";
+                    setTimeout(() => autoResponse(userMessage), 1000);
+                }
+            }
+        });
+
+        function appendMessage(text, className) {
+            const message = document.createElement("div");
+            message.classList.add(className);
+            message.innerText = text;
+            chatbotMessages.appendChild(message);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function autoResponse(userMessage) {
+            const responses = {
+                "hello": "Hello! How can I assist you with LuxeClean services?",
+                "pricing": "Our cleaning services start from $90. Check our services section for more details.",
+                "how do I book": "You can book a cleaning through our website or using the 'Book Now' button.",
+                "services": "We offer Standard, Deep, and Express Airbnb cleanings. Need more details?",
+                "contact": "You can reach us via WhatsApp or email at contact@luxecleanmelbourne.com.",
+                "thanks": "You're welcome! Let me know if you need more help.",
+                "bye": "Goodbye! Have a great day!"
+            };
+
+            const lowerCaseMessage = userMessage.toLowerCase();
+            const response = responses[lowerCaseMessage] || "I'm not sure about that. Please check our FAQ section!";
+            appendMessage(response, "bot-message");
+        }
+    });
     </script>
 </body>
 </html>
